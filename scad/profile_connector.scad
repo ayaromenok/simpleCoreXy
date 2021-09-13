@@ -3,11 +3,12 @@ include <../../lib/lib2.scad>
 
 //con_x2__nuts_x5();
 //profile_connector2();
+/*
 rotate([0,0,90]){
 profile_connector2(-25,-25, rx=-90);
 profile_connector2(25,25,rx=-90, rz=180);
 }
-
+*/
 //profile_connector2_part();
 //profile_connector(rx=180);
 //profile_connector(rx=180, isLight=true);
