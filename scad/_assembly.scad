@@ -7,6 +7,20 @@ include <ext_parts.scad>
 asm_bottom();
 asm_top();
 asm_vecrtical();
+asm_heatbed();
+
+module asm_heatbed(px=0,py=0,pz=0, rx=0,ry=0,rz=0, mx=0,my=0,mz=0){
+    translate([(px),(py),pz])
+    rotate([rx,ry,rz])
+    mirror([mx,my,mz]){
+        alu20x20(350,   0,107.5,155,    90,0,90);
+        alu20x20(350,   0,-107.5,155,   90,0,90);
+        alu20x20(195,   134,0,155,    90,0,0);
+        alu20x20(195,   -134,0,155,    90,0,0);
+        heatBed_Double_Barreled(-165,79,200,  0,-145,0);
+        heatBed_Double_Barreled(165,-79,200,  0,-145,180);
+    }//transform
+}//module asm_vertical
 
 module asm_vecrtical(px=0,py=0,pz=0, rx=0,ry=0,rz=0, mx=0,my=0,mz=0){
     translate([(px),(py),pz])
