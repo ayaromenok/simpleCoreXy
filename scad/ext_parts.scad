@@ -230,6 +230,7 @@ module ZIntegrated_Clamp(px=0,py=0,pz=0, rx=0,ry=0,rz=0, mx=0,my=0,mz=0){
     translate([(px), (py), pz])
     rotate([rx,ry,rz])
     mirror([mx,my,mz]){  
+        color("green")
         import("../ext/forkLIFT_ZIntegrated_-_Clamp_V13.stl", convexity=3);
     }//transform
 }//module
@@ -237,6 +238,7 @@ module ZIntegrated_Motor_Mount(px=0,py=0,pz=0, rx=0,ry=0,rz=0, mx=0,my=0,mz=0){
     translate([(px), (py), pz])
     rotate([rx,ry,rz])
     mirror([mx,my,mz]){  
+        color("green")
         import("../ext/forkLIFT_ZIntegrated_-_Motor_Mount_195mm_V13.stl", convexity=3);
     }//transform
 }//module
@@ -244,6 +246,7 @@ module ZIntegrated_Top(px=0,py=0,pz=0, rx=0,ry=0,rz=0, mx=0,my=0,mz=0){
     translate([(px), (py), pz])
     rotate([rx,ry,rz])
     mirror([mx,my,mz]){  
+        color("green")
         import("../ext/forkLIFT_ZIntegrated_Top_-_Axis_Mount_195mm_V13.stl", convexity=3);
     }//transform
 }//module

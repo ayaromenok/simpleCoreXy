@@ -41,6 +41,19 @@ module asm_bottom(px=0,py=0,pz=0, rx=0,ry=0,rz=0, mx=0,my=0,mz=0){
         profile_connector2(180,-200,0, 90,0,180);
         profile_connector2(-180,200,0, 90,0,0);
         profile_connector2(-180,-200,0, 90,0,90);
+        
+        ZIntegrated_Motor_Mount(200,0,-3,    145,0,-90);
+        ZIntegrated_Motor_Mount(-200,0,-3,    145,0,90);
+        /*ZIntegrated_Clamp(79,-231,-16,    -45,0,0);
+        ZIntegrated_Clamp(-79,-231,-16,    -45,0,0);
+        ZIntegrated_Clamp(79,231,-16,    -45,0,180);
+        ZIntegrated_Clamp(-79,231,-16,    -45,0,180);*/
+        ZIntegrated_Top(200,0,422, 145,180,-90);
+        ZIntegrated_Top(-200,0,422, 145,180,90);
+        yCyl(4,450, 168,79,210, clr="blue");
+        yCyl(4,450, 168,-79,210, clr="blue");
+        yCyl(4,450, -168,79,210, clr="blue");
+        yCyl(4,450, -168,-79,210, clr="blue");
     }//transform
 }//module asm_bottom
 
