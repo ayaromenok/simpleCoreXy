@@ -3,6 +3,7 @@ include <alu_profile.scad>
 include <mgn.scad>
 include <profile_connector.scad>
 include <ext_parts.scad>
+include <ext_corexy.scad>
 
 asm_bottom();
 asm_top();
@@ -79,14 +80,19 @@ module asm_top(px=0,py=0,pz=0, rx=0,ry=0,rz=0, mx=0,my=0,mz=0){
         alu20x20(400,   0,-210,420,    0,90,0);
         alu20x20(400,   190,0,420,    90,0,0);
         alu20x20(400,   -190,0,420,    90,0,0);
-        profile_connector(-190,210,430,     rz=-90, isLight=true);
-        profile_connector(190,210,430,      rz=90,mx=1, isLight=true);
-        profile_connector(190,-210,430,     rz=90, isLight=true);
-        profile_connector(-190,-210,430,   rz=-90,mx=1, isLight=true);
+        //profile_connector(-190,210,430,     rz=-90, isLight=true);
+        //profile_connector(190,210,430,      rz=90,mx=1, isLight=true);
+        //profile_connector(190,-210,430,     rz=90, isLight=true);
+        //profile_connector(-190,-210,430,   rz=-90,mx=1, isLight=true);
         
         MGN12H(350,     0,200,420, 90,0,0);
         MGN12H(350,     0,-200,420, -90,0,0);
 
         MGN12H(350,     0,0,420, 0,0,90);
+        
+        nema17_mount_L(-245,-223,434,  0,180,-90); 
+        nema17_mount_R(-245,151,434, 0,180,-90);
+        y_idle_pulley_mount_L(170,-155,430, 0,0,-90);
+        y_idle_pulley_mount_R(170,220,430, 0,0,-90);
     }//transform
 }//module asm_top
